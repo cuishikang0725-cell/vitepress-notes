@@ -144,7 +144,6 @@ methods: {
 <a v-on:click.once="doThis"></a>
 ```
 
-不像其它只能对原生的 DOM 事件起作用的修饰符，`.once` 修饰符还能被用到自定义的[组件事件](./component-custom-events.html)上。
 
 ```html
 <!-- 滚动事件的默认行为 (即滚动行为) 将会立即触发 -->
@@ -261,8 +260,6 @@ Vue 为最常用的按键提供了别名：
   v-on:enlarge-text="postFontSize += 0.1"
 ></blog-post>
 ```
-
-在子组件中，可以通过调用内置的 [**$emit**](./instance.html#组件实例属性) 方法并传入事件名称来触发一个事件：
 
 ```html
 <button v-on:click="$emit('enlarge-text')">
@@ -553,12 +550,3 @@ export default {
 - 在组件销毁前清理事件监听器
 - 避免在模板中直接修改数据
 :::
-
-
-
-
-
-
-
-
-
